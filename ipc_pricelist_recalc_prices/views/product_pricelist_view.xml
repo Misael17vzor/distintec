@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="ipc_history_open">
+            <field name="name">History of IPC</field>
+            <field name="res_model">pricelist.history.ipc</field>
+            <field name="domain">[('pricelist_id', '=', active_id)]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record id="historic_ipc_tree" model="ir.ui.view">
+            <field name="name">historic_ipc_form</field>
+            <field name="model">pricelist.history.ipc</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="create_date"/>
+                    <field name="product_tmpl_id"/>
+                    <field name="product_id"/>
+                    <field name="current_ipc"/>
+                    <field name="last_ipc"/>
+                    <field name="percent"/>
+                    <field name="increase"/>
+                    <field name="before_price"/>
+                    <field name="new_price"/>
+                </tree>
+            </field>
+        </record>
+        <!-- inherit product pricelist form-->
+        <record id="inherit_pricelist_show_ipc_initial" model="ir.ui.view">
+            <field name="name">inherit_pricelist_show_ipc_initial</field>
+            <field name="model">product.pricelist</field>
+            <field name="inherit_id" ref="product.product_pricelist_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="before">
+                    <header>
+                        <button name="open_ipc_pricelist_wizard" string="Update price with IPC" type="object" class="btn-primary"/>
+                    </header>
+                </xpath>
+                <xpath expr="//group[@name='pricelist_settings']" position="inside">
+                        <button string="Historic"
+                            class="oe_stat_button"
+                            icon="fa-history" name="%(ipc_history_open)d" type="action"/>
+                </xpath>
+                <xpath expr="//field[@name='country_group_ids']" position="before">
+                    <field name="partner_id"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

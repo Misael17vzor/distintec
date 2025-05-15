@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="q_mail_template__autorizador_aprobaciones" model="mail.template">
+            <field name="name">Solicitud de Aprobación</field>
+            <field name="model_id" ref="approvals.model_approval_request" />
+            <field name="subject">Solicitud de aprobación: ${object.name}</field>
+            <field name="auto_delete" eval="False" />
+            <field name="body_html" type="html">
+                <div>
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Estimado(s) <span style="font-weight: bold;">
+                                        %for approver in object.approver_ids:
+                                            ${approver.user_id.name},
+                                        %endfor
+                                    </span>
+                    </p>
+                    <p>
+                        Se ha hecho una solicitud de aprobación correspondiente a la categoría: <span style="font-style: italic;">"${object.category_id.name}"</span>, la cual necesita su
+                        autorización.
+                    </p>
+                    %if object.reason:
+                        <p>
+                            <span class="font-weight: bold;">Descripción:</span> <span style="font-style: italic;"> "${object.reason}"</span>
+                        </p>
+                    %endif
+
+                    %if object.date:
+                        <p>
+                            <span style="font-weight: bold;">Fecha: </span>${object.date}
+                        </p>
+                    %endif
+
+                    %if object.date_start:
+                        <p>
+                            <span style="font-weight: bold;">Periodo del: </span>${object.date_start}<span style="font-weight: bold;"> al: </span>${object.date_end}
+                        </p>
+                    %endif
+
+                    %if object.location:
+                        <p>
+                            <span style="font-weight: bold;">Ubicación: </span>${object.location}
+                        </p>
+                    %endif
+
+                    %if object.partner_id:
+                        <p>
+                            <span style="font-weight: bold;">Contacto: </span>${object.partner_id.name}
+                        </p>
+                    %endif
+                        
+                    %if object.amount:
+                        <p>
+                            <span style="font-weight: bold;">Importe: </span>${object.amount}
+                        </p>
+                    %endif
+
+                    %if object.reference:
+                        <p>
+                            <span style="font-weight: bold;">Referencia: </span>${object.reference}
+                        </p>
+                    %endif
+
+                    %if object.product_line_ids:
+                        <p>Lista de productos:</p>
+                        <table style="border: 1px solid black; width: 90%; border-collapse: collapse;">
+                            <thead>
+                                <tr>
+                                    <th style="border: 1px solid black;">Producto</th>
+                                    <th style="border: 1px solid black;">Descripción</th>
+                                    <th style="border: 1px solid black;">Cantidad</th>
+                                    <th style="border: 1px solid black;">Unidad de Medida</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                %for product_line in object.product_line_ids:
+                                    <tr>
+                                        <td style="border: 1px solid black;">${product_line.product_id.name}</td>
+                                        <td style="border: 1px solid black;">${product_line.description}</td>
+                                        <td style="border: 1px solid black;">${product_line.quantity}</td>
+                                        <td style="border: 1px solid black;">${product_line.product_uom_id.name}</td>
+                                    </tr>
+                                %endfor
+                            </tbody>
+                        </table>
+                    %endif
+                    <p>
+                        Para responder a esta solicitud, es necesario ingresar al sistema.
+                    </p>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

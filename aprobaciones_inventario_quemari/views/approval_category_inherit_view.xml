@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="add_stock_picking_type_form_inherit_approvals" model="ir.ui.view">
+        <field name="name">add.stock.picking.type.form.inherit.approvals</field>
+        <field name="model">approval.category</field>
+        <field name="inherit_id" ref="approvals.approval_category_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group/field[@name='company_id']" position="after">
+                <field name="stock_picking_type_id"/>
+            </xpath>
+            <xpath expr="//sheet/notebook/page[@name='options']/group/group[@name='option_settings']/field[@name='has_location']" position="after">
+                <field name="user_product" widget="radio" options="{'horizontal': true}"/>
+            </xpath>
+        </field>
+    </record>    
+</odoo>

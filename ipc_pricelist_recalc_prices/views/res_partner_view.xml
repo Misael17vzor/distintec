@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- inherit res partner form-->
+        <record id="inherit_show_ipc_initial" model="ir.ui.view">
+            <field name="name">inherit_show_ipc_initial</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='lang']" position="after">
+                    <field name="initial_ipc"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

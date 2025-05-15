@@ -1,0 +1,14 @@
+img
+    canal_distintec.png
+    catalogos.png
+    distintec.png
+    ig_difemat.png
+    ig_distintec.png
+    ig_gorila.png
+    logodifematb.png
+    logogorilab.png
+    logoid.png
+    logoindustrial.png
+    logoretail.png
+    preview_standard.png
+    res_company_1_x_logo_certificado.png

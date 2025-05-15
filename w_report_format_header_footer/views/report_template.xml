@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- External layouts styles -->
+    <template id="external_layout_distintec">
+        <div class="header" t-att-style="'min-height:200px !important;max-height:250px !important;padding-top: 0px;' if docs and docs._name in ('stock.move','quality.certificate') else 'padding-top: 20px; border: none !important; min-height:150px !important; padding-bottom:10px !important;' if docs and docs._name == 'sale.order' else 'padding-top: 20px;'">
+            <t t-set="docs" t-value="docs.sudo()"/>
+            <t t-if="docs and docs._name == 'quality.certificate'">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3 text-start" style="margin-top: 0 !important;padding-top: 0 !important;">
+                            <img src="/w_report_format_header_footer/static/img/res_company_1_x_logo_certificado.png" width="100%" style="max-height: 285px;max-width:125px"/>
+                        </div>
+                        <div class="col-3" style="padding-top:20px !important">
+                            <img class="img-fluid center-block" src="/w_report_format_header_footer/static/img/distintec.png" width="100%"/>
+                        </div>
+                        <div class="col-6" style="padding-top:20px">
+                            <div class="row">
+                                <div class="col-4 text-start">
+                                    <span><b>Cliente:</b></span>
+                                </div>
+                                <div class="col-8 text-start">
+                                    <span><b><span t-esc="docs[0].partner_id.name"/></b></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 text-start">
+                                    <span><b>RUT:</b></span>
+                                </div>
+                                <div class="col-8 text-start">
+                                    <span><b><span t-esc="docs[0].partner_id.vat"/></b></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 text-start">
+                                    <span><b>O.C:</b></span>
+                                </div>
+                                <div class="col-8 text-start">
+                                    <span>
+                                        <b>
+                                            <span t-field="docs[0].picking_id.sale_id.client_order_ref"/>   
+                                        </b>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 text-start">
+                                    <span><b>Guía:</b></span>
+                                </div>
+                                <div class="col-8 text-start">
+                                    <b><span t-if="docs[0] and docs[0].stock_move_id.picking_number" t-esc="docs[0].stock_move_id.picking_number.replace('GDE','')"/></b>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 text-start">
+                                    <span><b>Fecha de emisión:</b></span>
+                                </div>
+                                <div class="col-8 text-start">
+                                    <span><b><span t-field="docs[0].begin_date" t-options="{&quot;widget&quot;: &quot;date&quot;, &quot;format&quot;: &quot;dd/MM/yyyy&quot;}"/></b></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 text-start">
+                                    <span><b>Valido hasta:</b></span>
+                                </div>
+                                <div class="col-8 text-start">
+                                    <span><b><span t-field="docs[0].end_date" t-options="{&quot;widget&quot;: &quot;date&quot;, &quot;format&quot;: &quot;dd/MM/yyyy&quot;}"/></b></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+            <t t-elif="docs and docs._name == 'stock.move'">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3 text-start" style="margin-top: 0 !important;padding-top: 0 !important;">
+                            <img src="/w_report_format_header_footer/static/img/res_company_1_x_logo_certificado.png" width="100%" style="max-height: 285px;max-width:125px"/>
+                        </div>
+                        <div class="col-3" style="padding-top:20px !important">
+                            <img class="img-fluid center-block" src="/w_report_format_header_footer/static/img/distintec.png" width="100%"/>
+                        </div>
+                        <div class="col-6" style="padding-top:20px">
+                            <div class="row">
+                                <div class="col-4 text-start">
+                                    <span><b>Cliente:</b></span>
+                                </div>
+                                <div class="col-8 text-start">
+                                    <span><b><span t-esc="docs[0].picking_id.partner_id and docs[0].picking_id.partner_id.parent_id and docs[0].picking_id.partner_id.parent_id.parent_id and docs[0].picking_id.partner_id.parent_id.parent_id.name or docs[0].picking_id.partner_id and docs[0].picking_id.partner_id.parent_id and docs[0].picking_id.partner_id.parent_id.name or docs[0].picking_id.partner_id.name"/></b></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 text-start">
+                                    <span><b>RUT:</b></span>
+                                </div>
+                                <div class="col-8 text-start">
+                                    <span><b><span t-esc="docs[0].picking_id.partner_id and docs[0].picking_id.partner_id.parent_id and docs[0].picking_id.partner_id.parent_id.parent_id and docs[0].picking_id.partner_id.parent_id.parent_id.vat or docs[0].picking_id.partner_id and docs[0].picking_id.partner_id.parent_id and docs[0].picking_id.partner_id.parent_id.vat or docs[0].picking_id.partner_id.vat"/></b></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 text-start">
+                                    <span><b>O.C:</b></span>
+                                </div>
+                                <div class="col-8 text-start">
+                                    <span>
+                                        <b>
+                                            <span t-field="docs[0].picking_id.sale_id.client_order_ref"/>  
+                                        </b>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 text-start">
+                                    <span><b>Guía:</b></span>
+                                </div>
+                                <div class="col-8 text-start">
+                                    <span><b>
+                                        <span t-esc="docs[0].picking_id.l10n_latam_document_number"/>
+                                        </b></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 text-start">
+                                    <span><b>N/S:</b></span>
+                                </div>
+                                <div class="col-8 text-start">
+                                    <span t-if="doc and doc._context.get('serial_number') and not doc.serial_number_prefix">
+                                        <b><span t-esc="doc._context.get('serial_number')"/></b>
+                                    </span>
+                                    <span t-if="doc and doc._context.get('serial_number') and doc.serial_number_prefix">
+                                        <b><span t-esc="doc.serial_number_prefix"/>-<span t-esc="doc._context.get('serial_number')"/></b>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 text-start">
+                                    <span><b>Fecha:</b></span>
+                                </div>
+                                <div class="col-8 text-start">
+                                    <span><b><span t-field="docs[0].picking_id.date_done"/></b></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+            <t t-elif="docs and docs._name in ('sale.order','purchase.order')">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="/w_report_format_header_footer/static/img/distintec.png" style="max-height: 55px;"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="">
+                                        <p t-if="docs[0]._name == 'sale.order' and docs[0].user_id.name" style="font-size:8pt; color: black">
+                                            <br/>
+                                            <span style="color: #FF6A13; font-size: 10pt">CONTACTO DISTINTEC:</span>
+                                            <br/>
+                                            <span t-field="docs[0].user_id"/>
+                                            <br/>
+                                            <span t-field="docs[0].user_id.partner_id.email"/>
+                                            <br/>
+                                            <span t-field="docs[0].user_id.partner_id.phone"/>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6" style="font-size: 9pt">
+                            <div class="row">
+                                <div class="col-4">
+                                    <t t-if="docs._name == 'purchase.order'">
+                                        Señor(es):
+                                    </t>
+                                    <t t-else="">
+                                        Cliente:
+                                    </t>
+                                </div>
+                                <div class="col-8">
+                                    <span t-field="docs[0].partner_id"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    Ruc:
+                                </div>
+                                <div class="col-8">
+                                    <span t-field="docs[0].partner_id.vat"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    Dirección:
+                                </div>
+                                <div class="col-8">
+                                    <span t-field="docs[0].partner_id.street"/><t t-if="docs[0].partner_id.city">, <span t-field="docs[0].partner_id.city"/></t><t t-if="docs[0].partner_id.state_id">, <span t-field="docs[0].partner_id.state_id.name"/></t><t t-if="docs[0].partner_id.country_id">, <span t-field="docs[0].partner_id.country_id.name"/></t>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <t t-if="docs._name == 'purchase.order'">
+                                    <div class="col-4">
+                                        Teléfono:
+                                    </div>
+                                    <div class="col-8">
+                                        <span t-field="docs[0].partner_id.phone"/>
+                                    </div>
+                                </t>
+                                <t t-else="">
+                                    <div class="col-4">
+                                        División:
+                                    </div>
+                                    <div class="col-8">
+                                        <span t-field="docs[0].team_id"/>
+                                    </div>
+                                </t>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    Fecha de emisión:
+                                </div>
+                                <div class="col-8">
+                                    <span t-field="docs[0].date_order"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <t t-if="docs._name == 'purchase.order'">
+                                    <div class="col-4">
+                                        Moneda:
+                                    </div>
+                                    <div class="col-8">
+                                        <span t-field="docs[0].currency_id"/>
+                                    </div>
+                                </t>
+                                <t t-else="">
+                                    <div class="col-4">
+                                        Fecha Venc.:
+                                    </div>
+                                    <div class="col-8">
+                                        <span t-field="docs[0].validity_date"/>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 5px;margin-bottom: 5px;background-color: #FF6A13;color: white; padding-top: 5px; padding-bottom: 5px">
+                        <t t-if="docs[0]._name == 'purchase.order'">
+                            <span style="font-style: italic;">Orden de Compra:</span>
+                        </t>
+                        <t t-else="not (env.context.get('proforma', False) or is_pro_forma)">
+                            <span t-if="docs[0].state not in ['draft','sent']" style="font-style: italic;">NOTA DE VENTA: </span>
+                            <span t-if="docs[0].state in ['draft','sent']" style="font-style: italic;">COTIZACIÓN: </span>
+                        </t>
+                        <t t-if="env.context.get('proforma', False) or is_pro_forma">
+                            <span style="font-style: italic;">Pro-Forma Invoice # </span>
+                        </t>
+                        <strong><span t-field="docs[0].name"/></strong>
+                    </div>
+                </div>
+            </t>
+            <t t-elif="docs and docs._name in ('stock.picking')">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="/w_report_format_header_footer/static/img/distintec.png" style="max-height: 55px;"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="">
+                                        <p style="font-size:8pt; color: black">
+                                            <br/>
+                                            <strong><span style="color: #FF6A13; font-size: 10pt"></span></strong>
+                                            <br/>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6" style="font-size: 9pt">
+                            <div class="container">
+                                <div style="padding-top: 0px;margin-left:30px" class="col-12" name="company_address">
+                                    <span><strong>DISTRIBUIDORA INDUSTRIAL Y TECNICA S.A.</strong></span><br/>
+                                    R.U.T.: <span t-field="company.vat"/><br/>
+                                    Importación y Distribución de Insumos para Izaje <br/>
+                                    Casa Matriz: El Quillay 520, Lampa - Santiago<br/>
+                                    Fono: <span t-field="company.phone"/><br/>
+                                    Email: <span t-field="company.email"/><br/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 5px;margin-bottom: 5px;background-color: #FF6A13;color: white; padding-top: 5px; padding-bottom: 5px">
+                        <t>
+                            <span class="p-2" style="font-style: italic; color: #FF6A13"></span>
+                        </t>
+                    </div>
+                </div>
+            </t>
+            <t t-else="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="/w_report_format_header_footer/static/img/distintec.png" style="max-height: 55px;"/>
+                        </div>
+                        <div style="padding-top: 0px;margin-left:30px" class="col-6" name="company_address">
+                            <span><strong>DISTRIBUIDORA INDUSTRIAL Y TECNICA S.A.</strong></span><br/>
+                            <t t-if="company">
+                                R.U.T.: <span t-field="company.vat"/><br/>
+                                Importación y Distribución de Insumos para Izaje <br/>
+                                Casa Matriz: El Quillay 520, Lampa - Santiago<br/>
+                                Fono: <span t-field="company.phone"/><br/>
+                                Email: <span t-field="company.email"/><br/>
+                            </t>
+                            <t t-else="">
+                                <!-- Fallback when no company is available -->
+                                R.U.T.: 12.345.678-9<br/>
+                                Importación y Distribución de Insumos para Izaje <br/>
+                                Casa Matriz: El Quillay 520, Lampa - Santiago<br/>
+                                Fono: +56 2 2345 6789<br/>
+                                Email: info@distintec.cl<br/>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </div>
+      
+        <!-- Article section with conditional based on document type -->
+        <t t-if="docs and docs._name in ('stock.picking')">
+            <div class="article o_report_layout_distintec_small" style="padding-top: 150px;" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <t t-raw="0"/>
+            </div>
+        </t>
+        <t t-elif="docs and docs._name in ('sale.order')">
+            <div class="article o_report_layout_distintec_small" style="min-height:600px !important" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <t t-raw="0"/>
+            </div>
+        </t>
+        <t t-elif="docs and docs._name in ('purchase.order')">
+            <div class="article o_report_layout_distintec" style="padding-top: 105px;" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <t t-raw="0"/>
+            </div>
+        </t>
+        <t t-else="">
+            <div class="article o_report_layout_distintec">
+                <t t-raw="0"/>
+            </div>
+        </t>
+
+        <!-- MODIFIED FOOTER SECTION: Now allows footer for sale orders -->
+        <t t-if="docs and docs._name in ('quality.certificate')">
+            <!-- No footer for quality certificates -->
+        </t>
+        <t t-elif="docs and docs._name in ('stock.picking')">
+            <!-- No footer for stock pickings -->
+        </t>
+        <t t-else="">
+            <div class="footer" style="min-height:350px !important;padding-bottom:10px">
+                <div class="footer_iso">
+                    <div class="container">
+                        <strong>
+                            <div class="row">
+                                <div class="col-4 text-start"/>
+                                <div class="col-4 text-center"/>
+                                <div class="col-4 text-end"/>
+                            </div>
+                        </strong>
+                    </div>
+                </div>
+                <t t-if="docs and docs._name == 'quality.certificate'">
+                    <!-- No additional footer content for quality certificates -->
+                </t>
+                <t t-elif="docs and docs._name != 'stock.move'">
+                    <div class="footer_division">
+                        <div class="container">
+                            <div class="row">
+                                <div class="offset-8 col-4 text-start">Conoce nuestras divisiones:</div>
+                            </div>
+                            <div class="row img_divi" style="padding-bottom:20px">
+                                <div class="col-3" style="margin-right: 30px;margin-bottom:15px">
+                                    <img src="/w_report_format_header_footer/static/img/logoindustrial.png" style="max-height: 60px;"/>
+                                </div>
+                                <div class="col-2">
+                                    <img src="/w_report_format_header_footer/static/img/logoretail.png" style="max-height: 60px;"/>
+                                </div>
+                                <div class="col-2" style="margin-left: 30px;margin-bottom:15px">
+                                    <img src="/w_report_format_header_footer/static/img/logoid.png" style="max-height: 60px;"/>
+                                </div>
+                                <div class="col-4">
+                                    <div class="text-end web_distintec"><strong>www.distintec.cl</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+                <t t-else="">
+                    <div class="container">
+                        <!-- Empty container for stock move footer -->
+                    </div>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <!-- Internal layouts -->
+    <template id="internal_header_distintec">
+        <div class="header oe_internal_distintec_header">
+            <div class="row">
+                <div class="col-2" style="padding-top: 22px;">
+                    <img width="80%" class="img-fluid" src="/w_report_format_header_footer/static/img/distintec.png" />
+                </div>
+                <t t-if="o and o._name == 'mrp.production'">
+                    <div class="col-4 float-end">
+                        <h3 style="margin: 0px !important;padding: 0px !important;text-align: right;">
+                            <b>OP N°: <t t-esc="o.name" /> <t t-esc="o._name"/></b>
+                        </h3>
+                        <h3 style="margin: 0px !important;padding: 0px !important;text-align: right;">
+                            <b>Prioridad: <t t-esc="o.priority" /></b>
+                        </h3>
+                    </div>
+                </t>
+            </div>
+        </div>
+    </template>
+
+    <template id="internal_layout_inherit_distintec" inherit_id="web.internal_layout">
+        <xpath expr="//div[hasclass('header')]" position="replace">
+            <t t-if="o and o._name and o._name == 'mrp.production'">
+                <t t-call="w_report_format_header_footer.internal_header_distintec" />
+            </t>
+            <t t-else="">
+                <div class="row">
+                    <div class="col-3">
+                        <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/>
+                    </div>
+                    <t t-if="o and o._name and o._name == 'mrp.production'">
+                        <div class="col-2 offset-2 text-center">
+                            <span t-esc="company.name"/> <t t-esc="o._name"/>
+                        </div>
+                    </t>
+                    <div class="col-2 offset-3 text-end">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><span class="page"/></li>
+                            <li class="list-inline-item">/</li>
+                            <li class="list-inline-item"><span class="topage"/></li>
+                        </ul>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Document-specific layout that extends the base template -->
+    <template id="external_layout_distintec_document" t-name="Custom External Layout for Documents">
+        <t t-call="w_report_format_header_footer.external_layout_distintec">
+            <t t-if="o and o._name == 'sale.order'">
+                <!-- Sale order specific header content -->
+                <div class="mt-4 mb-2 bg-primary text-white p-2">
+                    <t t-if="o.state not in ['draft','sent']">
+                        <span style="font-style: italic;">NOTA DE VENTA: </span>
+                    </t>
+                    <t t-else="">
+                        <span style="font-style: italic;">COTIZACIÓN: </span>
+                    </t>
+                    <strong><span t-field="o.name"/></strong>
+                </div>
+            </t>
+            <t t-raw="0"/>
+        </t>
+    </template>
+
+    <!-- Remove title section from Sale Order reports -->
+    <template id="report_saleorder_document_distintec" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//h2[@class='mt-4']" position="replace">
+            <!-- Replace with an empty div with 30px height for spacing -->
+            <div style="height: 30px;"></div>
+        </xpath>
+    </template>
+
+    <!-- Replace title section in Purchase Order reports with empty space -->
+    <template id="report_purchaseorder_document_distintec" inherit_id="purchase.report_purchaseorder_document">
+        <xpath expr="//div[@class='mt-4'][h2]" position="replace">
+            <!-- Replace with an empty div with 30px height for spacing -->
+            <div style="height: 30px;"></div>
+        </xpath>
+    </template>
+</odoo>

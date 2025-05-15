@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<odoo>
+    <record id="ipc_pricelist_form_wizard" model="ir.ui.view">
+        <field name="name">ipc_pricelist_form_wizard</field>
+        <field name="model">pricelist.ipc.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Update prices - IPC">
+                <group>
+                    <group>
+                        <field name="current_ipc" />
+                    </group>
+                </group>
+                <footer>
+                    <button string="Update"
+                            class="btn-primary"
+                            name="update_prices_ipc"
+                            type="object"
+                            />
+                    <button string="Cancel"
+                            class="btn-secondary"
+                            special="cancel"
+                            />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

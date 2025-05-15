@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="group_commercial_act_control_show" model="res.groups">
+        <field name="name">Commercial activity limit controls</field>
+        <field name="category_id" ref="base.module_category_sales_crm"/>
+    </record>
+</odoo>

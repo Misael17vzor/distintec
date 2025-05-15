@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Paper format record -->
+        <record id="disintec_format_grl" model="report.paperformat">
+            <field name="name">Distintec General</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">78</field>
+            <field name="margin_bottom">35</field>
+            <field name="margin_left">5</field>
+            <field name="margin_right">5</field>
+            <field name="header_spacing">81</field>
+        </record>
+
+        <!-- Create the report layout entry that refers to your template -->
+        <record id="report_layout_distintec" model="report.layout">
+            <field name="name">Distintec</field>
+            <!-- Use view_id field correctly -->
+            <field name="view_id" ref="w_report_format_header_footer.external_layout_distintec"/>
+            <field name="sequence">50</field>
+            <field name="image">/w_report_format_header_footer/static/img/preview_standard.png</field>
+            <field name="pdf">/w_report_format_header_footer/static/pdf/preview_standard.pdf</field>
+        </record>
+    </data>
+</odoo>

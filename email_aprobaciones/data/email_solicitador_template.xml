@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="q_mail_template_solicitador_aprobaciones" model="mail.template">
+            <field name="name">Estatus Solicitud Aprobación</field>
+            <field name="model_id" ref="approvals.model_approval_request" />
+            <field name="subject">Estatus de solicitud de aprobación: ${object.name}</field>
+            <field name="auto_delete" eval="False" />
+            <field name="body_html" type="html">
+                <div>
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Estimado <span style="font-weight: bold;">${object.request_owner_id.name},</span>
+                    </p>
+                    <p>
+                    Le informamos que su solicitud de aprobación con nombre <span style="font-style: italic;">"${object.name}"</span> ha cambiado de estatus a:
+                    <strong>
+                        %if object.request_status == 'approved':
+                            APROBADO
+                        %elif object.request_status == 'refused':
+                            RECHAZADO
+                        %elif object.request_status == 'pending':
+                            ENVIADO
+                        %endif 
+                    </strong>.
+                    </p>
+                    %if object.reason:
+                    <p>
+                        <strong>Descripción de la solicitud:</strong> <span style="font-style: italic;"> "${object.reason}"</span>
+                    </p>
+                    %endif
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

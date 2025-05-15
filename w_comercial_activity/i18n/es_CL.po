@@ -1,0 +1,81 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* w_comercial_activity
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-13 22:33+0000\n"
+"PO-Revision-Date: 2018-09-13 22:33+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: w_comercial_activity
+#: code:addons/w_comercial_activity/models/inherited_crm_lead.py:74
+#, python-format
+msgid "%s doesn't have any of theses fields set: Customer (%s), Salesperson (%s) or Sales Channel (%s). Please set them to change Salesperson in next ir.cron run."
+msgstr "%s doesn't have any of theses fields set: Customer (%s), Salesperson (%s) or Sales Channel (%s). Please set them to change Salesperson in next ir.cron run."
+
+#. module: w_comercial_activity
+#: code:addons/w_comercial_activity/models/inherited_crm_lead.py:72
+#, python-format
+msgid "%s doesn't have any scheduled activity and/or the sales channel leader is the current salesperson, skipping ..."
+msgstr "%s doesn't have any scheduled activity and/or the sales channel leader is the current salesperson, skipping ..."
+
+#. module: w_comercial_activity
+#: code:addons/w_comercial_activity/models/inherited_crm_lead.py:67
+#, python-format
+msgid "%s: Found an activity with %s day(s) of %s available for customer %s, scaling to %s's Team Leader ..."
+msgstr "%s: Found an activity with %s day(s) of %s available for customer %s, scaling to %s's Team Leader ..."
+
+#. module: w_comercial_activity
+#: model:ir.model,name:w_comercial_activity.model_mail_activity
+msgid "Activity"
+msgstr "Actividad"
+
+#. module: w_comercial_activity
+#: model:ir.actions.server,name:w_comercial_activity.check_leads_comercial_activity_limit_ir_actions_server
+#: model:ir.cron,cron_name:w_comercial_activity.check_leads_comercial_activity_limit
+#: model:ir.cron,name:w_comercial_activity.check_leads_comercial_activity_limit
+msgid "CRM: Check partner's limit for no comercial activity"
+msgstr "CRM: Verifique el límite del cliente para no realizar actividad comercial"
+
+#. module: w_comercial_activity
+#: code:addons/w_comercial_activity/models/inherited_crm_lead.py:69
+#, python-format
+msgid "Changed %s salesperson to %s one."
+msgstr "Changed %s salesperson to %s one."
+
+#. module: w_comercial_activity
+#: model:ir.model,name:w_comercial_activity.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: w_comercial_activity
+#: model:ir.model,name:w_comercial_activity.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidad"
+
+#. module: w_comercial_activity
+#: model:ir.model.fields,field_description:w_comercial_activity.field_res_partner_no_comercial_act_limit
+#: model:ir.model.fields,field_description:w_comercial_activity.field_res_users_no_comercial_act_limit
+msgid "Limit for No Comercial Activity"
+msgstr "Límite de días sin actividad comercial"
+
+#. module: w_comercial_activity
+#: model:ir.model.fields,help:w_comercial_activity.field_res_partner_no_comercial_act_limit
+#: model:ir.model.fields,help:w_comercial_activity.field_res_users_no_comercial_act_limit
+msgid "Number of days that you set for no changes about               Comercial Lead activities (default=10 days)."
+msgstr "Número de dias permitidos sin realizar Actividad comercial en Iniciativas (defecto=10 dias)."
+
+#. module: w_comercial_activity
+#: code:addons/w_comercial_activity/models/inherited_crm_lead.py:74
+#, python-format
+msgid "missing"
+msgstr "perdida"
+

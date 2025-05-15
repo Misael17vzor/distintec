@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+
+    <record id="approval_category_view_form_inherit_approvals" model="ir.ui.view">
+        <field name="name">approval.category.view.form.inherit</field>
+        <field name="model">approval.category</field>
+        <field name="inherit_id" ref="approvals.approval_category_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group/field[@name='company_id']" position="after">
+                <field name="users_cc_email_pending" widget="many2many_tags"/>
+                <field name="users_cc_email_approved" widget="many2many_tags"/>
+                <field name="users_cc_email_refused" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>    
+    
+    </data>
+
+</odoo>

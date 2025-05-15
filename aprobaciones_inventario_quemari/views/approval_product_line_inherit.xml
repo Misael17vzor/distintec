@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="approval_product_line_view_tree_inherit" model="ir.ui.view">
+        <field name="name">approval.product.line.view.tree.inherit</field>
+        <field name="model">approval.product.line</field>
+        <field name="inherit_id" ref="approvals.approval_product_line_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='quantity']" position="before">
+                <field name="location_id" groups="stock.group_stock_multi_warehouses"
+                    options="{'no_create_edit': True, 'no_open': True}"
+                    invisible="parent.has_location == 'no'"
+                    required="parent.has_location == 'required'"/>
+                <field name="stock_available" groups="stock.group_stock_multi_warehouses"
+                    invisible="parent.has_location == 'no'"/>
+            </xpath>
+            <xpath expr="//field[@name='quantity']" position="after">
+                <field name="user_id"
+                    options="{'no_create_edit': True, 'no_open': True}"
+                    invisible="not parent.user_id_options"
+                    required="parent.user_id_options"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

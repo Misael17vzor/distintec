@@ -1,0 +1,131 @@
+/* layout_distintec.scss */
+
+/* Basic reset and common styles */
+.o_report_layout_distintec {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Header styles */
+.header {
+    padding: 20px 15px;
+    margin-bottom: 20px;
+}
+
+/* Logo and tagline */
+.tagline {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* Document title */
+.document-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* Contact information */
+.contact-distintec {
+    margin-bottom: 15px;
+    
+    strong {
+        color: #FF6A13;
+        font-size: 14px;
+    }
+}
+
+/* Information sections */
+.client-info,
+.vendor-info,
+.certificate-info,
+.picking-info {
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.info-label {
+    font-weight: 500;
+}
+
+.info-value {
+    font-weight: normal;
+}
+
+/* Document info section */
+.document-info {
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+/* Orange bar for document type */
+.orange-bar {
+    background-color: #FF6A13;
+    color: white;
+    padding: 8px 15px;
+    margin: 15px 0;
+    font-size: 14px;
+    font-style: italic;
+    
+    strong {
+        font-style: normal;
+    }
+}
+
+/* Certificate specific */
+.cert-container {
+    margin-bottom: 15px;
+}
+
+.cert-logo {
+    padding: 5px;
+    text-align: center;
+}
+
+.certificate-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FF6A13;
+    margin-bottom: 15px;
+}
+
+/* Footer styles */
+.footer {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+.division-logo {
+    margin-bottom: 10px;
+}
+
+.web-distintec {
+    color: #FF6A13;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Company info section */
+.company-info {
+    font-size: 12px;
+    line-height: 1.4;
+    
+    strong {
+        font-size: 14px;
+    }
+}
+
+/* Table styles for consistency */
+.table-sm {
+    font-size: 13px;
+}
+
+.table-sm th {
+    background-color: #f5f5f5;
+}
+

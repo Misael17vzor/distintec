@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sale_ordeer_form_assign_invoice" model="ir.ui.view">
+        <field name="name">sale.ordeer.form.assign.invoice</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form//header//button[@name='action_draft']" position="after">
+                <button class="btn-primary"
+                    name="show_sale_order_invoice_assigment"
+                    type="object"
+                    string="Relacionar Facturas"
+                    invisible="state not in ('sale')"
+                    groups="assign_invoice_to_so_and_po.assign_invoice_to_sale_order"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

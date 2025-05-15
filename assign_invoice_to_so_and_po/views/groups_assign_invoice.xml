@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="assign_invoice_to_sale_order" model="res.groups">
+        <field name="name">Relacionar Facturas a Órdenes de Venta</field>
+    </record>
+
+    <record id="assign_invoice_to_purchase_order" model="res.groups">
+        <field name="name">Relacionar Facturas a Órdenes de Compra</field>
+    </record>
+
+</odoo>

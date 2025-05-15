@@ -1,0 +1,181 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ipc_pricelist_recalc_prices
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e-20191106\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-12 22:17+0000\n"
+"PO-Revision-Date: 2019-11-12 22:17+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_history_ipc__before_price
+msgid "Before Price"
+msgstr "Precio anterior"
+
+#. module: ipc_pricelist_recalc_prices
+#: model_terms:ir.ui.view,arch_db:ipc_pricelist_recalc_prices.ipc_pricelist_form_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model,name:ipc_pricelist_recalc_prices.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_history_ipc__create_uid
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_ipc_wizard__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_history_ipc__create_date
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_ipc_wizard__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_history_ipc__current_ipc
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_ipc_wizard__current_ipc
+msgid "Current Ipc"
+msgstr "IPC anterior"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_history_ipc__display_name
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_ipc_wizard__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: ipc_pricelist_recalc_prices
+#: model_terms:ir.ui.view,arch_db:ipc_pricelist_recalc_prices.inherit_pricelist_show_ipc_initial
+msgid "Historic"
+msgstr "Histórico IPC"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_product_pricelist__history_ipc_ids
+msgid "History Ipc"
+msgstr "Histórico IPC"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.actions.act_window,name:ipc_pricelist_recalc_prices.ipc_history_open
+msgid "History of IPC"
+msgstr "Histórico IPC"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_history_ipc__id
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_ipc_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_history_ipc__increase
+msgid "Increase"
+msgstr "Incremento"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_res_partner__initial_ipc
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_res_users__initial_ipc
+msgid "Initial Ipc"
+msgstr "IPC inicial"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_history_ipc__last_ipc
+msgid "Last Ipc"
+msgstr "Último IPC"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_history_ipc____last_update
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_ipc_wizard____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_history_ipc__write_uid
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_ipc_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_history_ipc__write_date
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_ipc_wizard__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_history_ipc__new_price
+msgid "New Price"
+msgstr "Nuevo precio"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_product_pricelist__partner_id
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_history_ipc__percent
+msgid "Percent"
+msgstr "Porcentaje %"
+
+#. module: ipc_pricelist_recalc_prices
+#: code:addons/ipc_pricelist_recalc_prices/wizard/ipc_wizard.py:31
+#, python-format
+msgid "Please, set a initial ipc for the partner of this pricelist."
+msgstr "Por favor, establezca un IPC inicial para el cliente de esta tarifa"
+
+#. module: ipc_pricelist_recalc_prices
+#: code:addons/ipc_pricelist_recalc_prices/wizard/ipc_wizard.py:26
+#, python-format
+msgid "Please, set a partner for this pricelist."
+msgstr "Por favor, establezca un cliente a la tarifa"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model,name:ipc_pricelist_recalc_prices.model_product_pricelist
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_history_ipc__pricelist_id
+msgid "Pricelist"
+msgstr "Tarifa"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_history_ipc__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model.fields,field_description:ipc_pricelist_recalc_prices.field_pricelist_history_ipc__product_tmpl_id
+msgid "Product Tmpl"
+msgstr "Plantilla del Producto"
+
+#. module: ipc_pricelist_recalc_prices
+#: model_terms:ir.ui.view,arch_db:ipc_pricelist_recalc_prices.ipc_pricelist_form_wizard
+msgid "Update"
+msgstr "Actualizar"
+
+#. module: ipc_pricelist_recalc_prices
+#: model_terms:ir.ui.view,arch_db:ipc_pricelist_recalc_prices.inherit_pricelist_show_ipc_initial
+msgid "Update price with IPC"
+msgstr "Actualizar precio con IPC"
+
+#. module: ipc_pricelist_recalc_prices
+#: code:addons/ipc_pricelist_recalc_prices/models/product_pricelist.py:23
+#: model_terms:ir.ui.view,arch_db:ipc_pricelist_recalc_prices.ipc_pricelist_form_wizard
+#, python-format
+msgid "Update prices - IPC"
+msgstr "Actualizar precios - IPC"
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model,name:ipc_pricelist_recalc_prices.model_pricelist_history_ipc
+msgid "pricelist.history.ipc"
+msgstr ""
+
+#. module: ipc_pricelist_recalc_prices
+#: model:ir.model,name:ipc_pricelist_recalc_prices.model_pricelist_ipc_wizard
+msgid "pricelist.ipc.wizard"
+msgstr ""
+

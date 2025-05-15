@@ -1,0 +1,200 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* w_report_format_header_footer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-18 23:16+0000\n"
+"PO-Revision-Date: 2018-12-18 23:16+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "<br/>\n"
+"                        Email:"
+msgstr "<br/>\n"
+"                        Email:"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "<br/>\n"
+"                        Importación y Distribución de Insumos para Izaje <br/>\n"
+"                        Casa Matriz: El Quillay 520, Lamp - Santiago<br/>\n"
+"                        Fono:"
+msgstr "<br/>\n"
+"                        Importación y Distribución de Insumos para Izaje <br/>\n"
+"                        Casa Matriz: El Quillay 520, Lamp - Santiago<br/>\n"
+"                        Fono:"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "<span><b>Cliente:</b></span>"
+msgstr "<span><b>Cliente:</b></span>"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "<span><b>Fecha:</b></span>"
+msgstr "<span><b>Fecha:</b></span>"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "<span><b>Guía:</b></span>"
+msgstr "<span><b>Guía:</b></span>"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "<span><b>N° Serie:</b></span>"
+msgstr "<span><b>N° Serie:</b></span>"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "<span><b>O.C:</b></span>"
+msgstr "<span><b>O.C:</b></span>"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "<span><b>Rut:</b></span>"
+msgstr "<span><b>Rut:</b></span>"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "<span><strong>Distribuidora Industrial y Técnica Spa.</strong></span><br/>\n"
+"                        R.U.T.:"
+msgstr "<span><strong>Distribuidora Industrial y Técnica Spa.</strong></span><br/>\n"
+"                        R.U.T.:"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "<span>Orden de Compra:</span>"
+msgstr "<span>Orden de Compra:</span>"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "<span>Pro-Forma Invoice # </span>"
+msgstr "<span>Factura Proforma # </span>"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "<strong>Contacto:</strong>"
+msgstr "<strong>Contacto:</strong>"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "<strong>www.distintec.cl</strong>"
+msgstr "<strong>www.distintec.cl</strong>"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "Certificamos que las partes y piezas que componen el item y/o documento de venta, cumple con las espeficaciones y normas\n"
+"                    internacionales en término de fabricación, calidad y resistencia, probado con nuestro Banco hidráulico de 200t. Certificado F-1103\n"
+"                    del instituto de investigación y Control del Ejército de Chile (IDIC).<span class=\"web_distintec\"><b>www.distintec.cl</b></span>"
+msgstr "Certificamos que las partes y piezas que componen el item y/o documento de venta, cumple con las espeficaciones y normas\n"
+"                    internacionales en término de fabricación, calidad y resistencia, probado con nuestro Banco hidráulico de 200t. Certificado F-1103\n"
+"                    del instituto de investigación y Control del Ejército de Chile (IDIC).<span class=\"web_distintec\"><b>www.distintec.cl</b></span>"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "Cliente"
+msgstr "Cliente"
+
+#. module: w_report_format_header_footer
+#: model:ir.model,name:w_report_format_header_footer.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "Conoce nuestras divisiones:"
+msgstr "Conoce nuestras divisiones:"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "Cotización:"
+msgstr "Cotización:"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "Dirección:"
+msgstr "Dirección:"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "División:"
+msgstr "División:"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "Fecha Venc.:"
+msgstr "Fecha Venc.:"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "Fecha de emisión:"
+msgstr "Fecha de emisión:"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "ISO 14001:2015"
+msgstr "ISO 14001:2015"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "ISO 9001: 2015"
+msgstr "ISO 9001: 2015"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "Moneda:"
+msgstr "Moneda:"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "Nota de Venta:"
+msgstr "Nota de Venta:"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "Nº:"
+msgstr "Nº:"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "OHSAS 18001: 2007"
+msgstr "OHSAS 18001: 2007"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "R.U.T.:"
+msgstr "R.U.T.:"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "Rut:"
+msgstr "Rut:"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "S.I.I. SANTIAGO PONIENTE"
+msgstr "S.I.I. SANTIAGO PONIENTE"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "Señor(es):"
+msgstr "Señor(es):"
+
+#. module: w_report_format_header_footer
+#: model:ir.ui.view,arch_db:w_report_format_header_footer.external_layout_distintec
+msgid "Teléfono:"
+msgstr "Teléfono:"
+
+#. module: w_report_format_header_footer
+#: model:ir.model,name:w_report_format_header_footer.model_res_config_settings
+msgid "res.config.settings"
+msgstr "res.config.settings"
